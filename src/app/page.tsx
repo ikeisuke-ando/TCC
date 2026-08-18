@@ -1,24 +1,37 @@
+'use client';
 import Topo from "@/src/widgets/Topo";
 import ButtonNavigation from "../components/ButtonNavigation";
-import Sidebar from "@/src/widgets/Sidebar";
-import TitleContent from "../components/TitleContent";
-import FlashCard from "../components/FlashCard";
-import {ArrowBigLeft, BookText} from "@/src/assets/icons";
+import AreaPrincipal from "../widgets/AreaPrincipal";
+import AreaMenu from "../widgets/AreaMenu";
+import AreaConteudo from "../widgets/AreaConteudo";
+import {ArrowBigLeft,ArrowBigRight} from "@/src/assets/icons";
+import { useState } from "react";
 
 export default function Home() {
+  const [conteudo,setConteudo] = useState(0);
+
   return (
-    <div>
-      <header className="flex items-center">
-        <Topo/>
-      </header>
+        <AreaPrincipal>
+              <Topo/>
+              <AreaMenu/> 
 
-      <ButtonNavigation child={<ArrowBigLeft/>}/>
+
+          <AreaConteudo contentNumber={conteudo}/>
+          
+          <div className="flex justify-between mt-3 ">
+              <ButtonNavigation icon={<ArrowBigLeft/>} acao={()=>{
+                setConteudo(conteudo - 1)
+                if(conteudo < 0){
+                    setConteudo(1);
+                  }
+                }}/>
+              <ButtonNavigation icon={<ArrowBigRight/>} acao={()=>{
+                setConteudo(conteudo + 1)
+                if(conteudo > 3)
+                  setConteudo(2);
+              }}/>
+        </div>
+      </AreaPrincipal>
     
-      <Sidebar/>
-
-      <TitleContent imagem={<BookText/>} titulo="teste"/>
-
-      <FlashCard pergunta="O que é ?" secao="Pergunta 1"/>
-    </div>
   );
 }

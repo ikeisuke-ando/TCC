@@ -5,11 +5,11 @@ interface cardProps{
 
 export default function FlashCard({secao,pergunta}: cardProps){
     return (
-        <section className="rounded-2xl border border-gray-400 h-56 w-32 text-center bg-white">
+        <section className="m-1 rounded-2xl border border-gray-400 h-56 w-32 text-center bg-white flex flex-col">
             <h5>{secao}</h5>
             <hr className="bg-mauve-300 border-0 h-0.5"/>
             
-            <p className="p-3 mt">
+            <p className="p-3 mt flex flex-1">
                 {pergunta}
             </p>
         </section>
