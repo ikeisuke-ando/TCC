@@ -1,5 +1,7 @@
-function verifica(conteudoNum: number, conteudos:string[]){
-    if(conteudoNum > -1)
+import { Data } from "../getData";
+
+function verifica(conteudoNum: number, conteudos:Data[]){
+    if(conteudoNum > -1 && conteudoNum < conteudos.length)
         return true;
     else{
         return false;

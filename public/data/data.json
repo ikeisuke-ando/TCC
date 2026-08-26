@@ -1,0 +1,19 @@
+[
+        {
+         "id":0,
+         "titulo":"titulo1",
+         "texto":"texto 1"
+        },
+
+        {
+            "id":1,
+            "titulo":"titulo2",
+            "texto":"Uma amostra completa é um conjunto de objetos de uma população de origem que inclui todos os objetos que satisfazem um conjunto de critérios de seleção bem definidos.[6] Por exemplo, uma amostra completa de homens australianos com altura superior a dois metros consistiria em uma lista com todos os homens australianos com altura superior a dois metros. Contudo, não incluiria homens alemães, mulheres australianas altas ou pessoas com altura inferior a dois metros. Então, compilar tal amostra completa exige uma lista completa da população de origem, incluindo dados sobre altura, gênero e nacionalidade para cada membro da população de origem. No caso de populações humanas, é improvável que tal lista completa exista, já que a população humana está na casa dos bilhões. No entanto, tais amostras completas estão frequentemente disponíveis em outras disciplinas, como o conjunto de jogadores em uma divisão principal de esportes, as datas de nascimento dos membros de um parlamento ou uma lista de magnitude limitada completa de objetos astronômicos. Uma amostra não viesada (representativa) é um conjunto de objetos escolhidos a partir de uma amostra completa usando um processo de seleção que não depende das propriedades dos objetos.[7] Por exemplo, uma amostra não viesada de homens australianos com altura superior a dois metros pode consistir em um subconjunto aleatoriamente amostrado de 1% dos homens australianos com altura superior a dois metros. Contudo, um subconjunto escolhido a partir do registro eleitoral pode ser viesada já que, por exemplo, homens com menos de 18 anos não estarão no registro eleitoral. No contexto astronômico, uma amostra não viesada pode consistir em uma fração de uma amostra completa para a qual os dados estão disponíveis, desde que a disponibilidade dos dados não seja viesada por propriedades individuais de fontes."
+        },
+
+        {
+            "id":2,
+            "titulo":"titulo3",
+            "texto":"texto 3"
+        }
+]
