@@ -1,6 +1,6 @@
 export {
-    ArrowBigLeft,
-    ArrowBigRight,
+    ArrowLeft,
+    ArrowRight,
     BookText,
     Menu
 } from 'lucide-react'

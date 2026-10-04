@@ -6,6 +6,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --fundo-topo:#243042;
+  --botao-proximo:#27a485;
+  --botao-anterior:#386bcc;
 }
 
 @theme inline {
@@ -13,6 +16,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-fundo-topo:var(--fundo-topo);
+  --color-botao-proximo:var(--botao-proximo);
+  --color-botao-anterior:var(--botao-anterior);
 }
 
 @media (prefers-color-scheme: dark) {

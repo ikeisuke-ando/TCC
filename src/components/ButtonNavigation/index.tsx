@@ -1,15 +1,19 @@
 import { ReactNode as nodeChild } from "react"
 import { tipoAcao,Data } from "@/src/models/getData"
+import { twMerge } from "tailwind-merge";
 
+type setFunction = React.Dispatch<React.SetStateAction<number>>
 interface buttonIcon{
     icon: nodeChild,
     tipoAcao:tipoAcao,
     indiceDado:number,
     listaConteudo: Data[],
-    acao: React.Dispatch<React.SetStateAction<number>>;
+    texto: string,
+    className ?: string,
+    acao: setFunction;
 }
 
-type setFunction = React.Dispatch<React.SetStateAction<number>>
+
 
  function navegar(acao: tipoAcao, indiceConteudo:number ,funcao:setFunction, listaConteudo:Data[]){
             if(acao === "somar" && (indiceConteudo + 1 < listaConteudo.length) )
@@ -21,11 +25,24 @@ type setFunction = React.Dispatch<React.SetStateAction<number>>
             
         } 
 
-export default function ButtonNavigation({icon, tipoAcao, indiceDado,acao,listaConteudo}: buttonIcon) { 
+export default function ButtonNavigation({icon, tipoAcao, indiceDado,acao,listaConteudo,texto, className}: buttonIcon) { 
+    
+    const estilos = `    w-44 rounded-[10px] p-2 
+                     flex justify-center text-white
+                     transition duration-500  hover:shadow-md
+                     hover:text-white cursor-pointer`;
 
     return (
-        <button className="border-3 border-gray-400 rounded-3xl p-2  bg-white transition duration-500  hover:bg-gray-600 hover:text-white cursor-pointer" onClick={() => navegar(tipoAcao,indiceDado,acao,listaConteudo)}>
-            {icon}
+        
+        <button className={twMerge(` w-44 rounded-[10px] p-2 
+                     flex justify-center text-white
+                     transition duration-500  hover:shadow-[0_0_20px_5px_rgba(99,102,241,0.5)]
+                    cursor-pointer`,className)} 
+        onClick={() => navegar(tipoAcao,indiceDado,acao,listaConteudo)}
+        >
+                {icon}
+                <span className="mx-2">{texto}</span>
+            
         </button>
     )
 }

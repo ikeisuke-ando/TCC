@@ -4,7 +4,7 @@ interface elementos {
 
 export default function AreaPrincipal( {children}:elementos){
      return (
-        <div className="w-full p-10 h-screen">
+        <div className="w-full h-screen">
                     {children}
         </div>
     )

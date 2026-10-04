@@ -1,9 +1,9 @@
-import { Data, getData } from "../models/getData";
-import AreaPrincipal from "../widgets/AreaPrincipal";
+import { Data, getData } from "@/src/models/getData";
+import AreaPrincipal from "@/src/widgets/AreaPrincipal";
 import Topo from "@/src/widgets/Topo";
-import AreaConteudo from "../widgets/AreaConteudo";
+import AreaConteudo from "@/src/widgets/AreaConteudo";
 
-export default async function Home() { 
+export default async function Sobre() { 
     const dado:Data[] = await getData();
 
     return (
